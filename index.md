@@ -4,7 +4,7 @@ layout: default
 
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
-[Link to another page](./(https://mac9313.github.io/Matt_1393.github.io/splunk)).
+[Link to another page](./splunk)
 
 There should be whitespace between paragraphs.
 
