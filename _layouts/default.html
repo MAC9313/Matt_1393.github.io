@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title | default: "Matthew's Projects" }}</title>
+  <!-- Include jekyll-theme-hacker default styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    /* Hacker-themed CSS for navigation and dropdown */
+    .nav {
+      background-color: #191919; /* Dark gray to match hacker theme */
+      overflow: hidden;
+      border-bottom: 2px solid #00ff00; /* Neon green border */
+      font-family: "Courier New", Consolas, monospace; /* Monospaced font */
+      padding: 10px 0;
+    }
+    .nav a {
+      float: left;
+      color: #00ff00; /* Neon green text */
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      text-shadow: 0 0 5px #00ff00; /* Neon glow */
+      transition: background-color 0.3s;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #00ff00; /* Neon green */
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      cursor: pointer;
+      text-shadow: 0 0 5px #00ff00; /* Neon glow */
+      transition: background-color 0.3s;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #191919; /* Dark gray */
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 255, 0, 0.3); /* Green-tinted shadow */
+      z-index: 1;
+      border: 1px solid #00ff00; /* Neon green border */
+    }
+    .dropdown-content a {
+      float: none;
+      color: #00ff00; /* Neon green */
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      text-shadow: 0 0 5px #00ff00; /* Neon glow */
+    }
+    .dropdown-content a:hover {
+      background-color: #00ff00; /* Neon green background */
+      color: #191919; /* Dark text for contrast */
+      text-shadow: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .nav a:hover, .dropdown:hover .dropbtn {
+      background-color: #00ff00; /* Neon green background */
+      color: #191919; /* Dark text */
+      text-shadow: none;
+    }
+    .content {
+      padding: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="/splunk">Splunk</a>
+        <!-- Add more links here if needed -->
+      </div>
+    </div>
+  </nav>
+  <div class="content">
+    {{ content }}
+  </div>
+</body>
+</html>
